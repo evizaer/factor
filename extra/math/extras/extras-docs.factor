@@ -103,3 +103,8 @@ HELP: round-to-decimal
 HELP: kahan-sum
 { $values { "seq" sequence } { "n" float } }
 { $description "Calculates the summation of the sequence using the Kahan summation algorithm." } ;
+
+HELP: weighted-random
+{ $values { "histogram" assoc } { "obj" "a key from the histogram" } }
+{ $description "Randomly picks a key out of " { $snippet "histogram" } " based on its frequency in the histogram." }
+{ $notes "This works best when " { $snippet "histogram" } " is an assoc with integer values, but also works with other numeric types." } ;
